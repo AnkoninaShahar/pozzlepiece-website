@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>POZzlePiece — About & Community</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header class="site-header" id="siteHeader">
+    <div class="nav-inner">
+      <a href="index.html" class="brand" aria-label="POZzlePiece Home">
+        <svg class="brand-icon" viewBox="0 0 110 105" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="puzzleGrad" x1="15" y1="8" x2="92" y2="96" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#FFA577" />
+              <stop offset="35%" stop-color="#D8388A" />
+              <stop offset="72%" stop-color="#B824C9" />
+              <stop offset="100%" stop-color="#6D38E0" />
+            </linearGradient>
+          </defs>
+          <path d="M46 14C46 8.5 50.5 4 56 4C61.5 4 66 8.5 66 14C66 17.5 64.1 20.6 61.3 22.3L84 25C88.4 25.5 91.5 29.5 91 33.9L88.5 56C86.2 53.5 82.9 52 79.2 52C72.2 52 66.5 57.7 66.5 64.7C66.5 71.7 72.2 77.4 79.2 77.4C82.4 77.4 85.3 76.2 87.5 74.2L85.4 91.5C84.9 95.9 80.9 99 76.5 98.5L57.8 96.3C59.7 94 60.8 91.1 60.8 87.9C60.8 80.9 55.1 75.2 48.1 75.2C41.1 75.2 35.4 80.9 35.4 87.9C35.4 90.6 36.3 93.1 37.7 95.2L22.5 93.4C18.1 92.9 15 88.9 15.5 84.5L18.1 63.2C16.1 64.6 13.7 65.4 11 65.4C4.9 65.4 0 60.5 0 54.4C0 48.3 4.9 43.4 11 43.4C14.2 43.4 17.1 44.8 19.1 47L21.9 24.5C22.4 20.1 26.4 17 30.8 17.5L49.5 19.7C47.3 18.1 46 16.2 46 14Z" fill="url(#puzzleGrad)"/>
+        </svg>
+        <div class="brand-wordmark">
+          <span class="brand-poz">POZzle</span><span class="brand-piece">Piece</span>
+        </div>
+      </a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html" class="nav-link active">About</a>
+        <a href="qa.html" class="nav-link">Community Q&amp;A</a>
+        <a href="careers.html" class="nav-link">Careers</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="btn btn-primary" data-open-beta>Join Beta</button>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="hero">
+      <canvas id="constellationCanvas"></canvas>
+      <div class="hero-glow glow-1"></div>
+      <div class="hero-glow glow-2"></div>
+
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <div class="eyebrow">
+            <span class="pulse-dot"></span>
+            Private Beta Launching Soon
+          </div>
+          <h1>Where every piece <span class="gradient-text">fits without explanation.</span></h1>
+          <p class="hero-subtitle">
+            POZzlePiece is a modern dating platform and curated safe space built exclusively for the HIV+ community. Real connection, zero stigma, and complete discretion—designed from the ground up for people who deserve better.
+          </p>
+          <div class="hero-cta-group">
+            <button class="btn btn-primary btn-lg" data-open-beta>
+              Request Beta Access
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+            <a href="contact.html" class="btn btn-glass btn-lg">Get in Touch</a>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal">
+          <div class="showcase-card main-card">
+            <div class="card-top-bar">
+              <div class="status-pill"><span class="dot"></span> Verified Safe Space</div>
+              <span class="chip">Early Access</span>
+            </div>
+            <div class="puzzle-emblem-wrap">
+              <div class="orbit-ring ring-1"></div>
+              <div class="orbit-ring ring-2"></div>
+              <svg class="center-puzzle" viewBox="0 0 110 105" fill="none">
+                <defs>
+                  <linearGradient id="heroPuzzleGrad" x1="10" y1="5" x2="95" y2="98" gradientUnits="userSpaceOnUse">
+                    <stop offset="0%" stop-color="#FFA577" />
+                    <stop offset="35%" stop-color="#D8388A" />
+                    <stop offset="70%" stop-color="#B824C9" />
+                    <stop offset="100%" stop-color="#6D38E0" />
+                  </linearGradient>
+                </defs>
+                <path d="M46 14C46 8.5 50.5 4 56 4C61.5 4 66 8.5 66 14C66 17.5 64.1 20.6 61.3 22.3L84 25C88.4 25.5 91.5 29.5 91 33.9L88.5 56C86.2 53.5 82.9 52 79.2 52C72.2 52 66.5 57.7 66.5 64.7C66.5 71.7 72.2 77.4 79.2 77.4C82.4 77.4 85.3 76.2 87.5 74.2L85.4 91.5C84.9 95.9 80.9 99 76.5 98.5L57.8 96.3C59.7 94 60.8 91.1 60.8 87.9C60.8 80.9 55.1 75.2 48.1 75.2C41.1 75.2 35.4 80.9 35.4 87.9C35.4 90.6 36.3 93.1 37.7 95.2L22.5 93.4C18.1 92.9 15 88.9 15.5 84.5L18.1 63.2C16.1 64.6 13.7 65.4 11 65.4C4.9 65.4 0 60.5 0 54.4C0 48.3 4.9 43.4 11 43.4C14.2 43.4 17.1 44.8 19.1 47L21.9 24.5C22.4 20.1 26.4 17 30.8 17.5L49.5 19.7C47.3 18.1 46 16.2 46 14Z" fill="url(#heroPuzzleGrad)"/>
+              </svg>
+            </div>
+            <div class="card-caption">
+              <h3>Dating &amp; Community, Reimagined</h3>
+              <p>No awkward disclosure hurdles. Just authentic people looking for romance, friendship, and belonging.</p>
+            </div>
+          </div>
+
+          <div class="floating-badge badge-top">
+            <span class="badge-icon">🛡️</span>
+            <div>
+              <strong>Privacy-First Architecture</strong>
+              <small>End-to-end discretion controls</small>
+            </div>
+          </div>
+
+          <div class="floating-badge badge-bottom">
+            <span class="badge-icon">✨</span>
+            <div>
+              <strong>More Than a Swipe</strong>
+              <small>Curated circles &amp; verified events</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- The Vision Section -->
+    <div class="section container">
+      <div class="section-header reveal">
+        <span class="section-tag">The Vision</span>
+        <h2>Built for connection, <span class="gradient-text">not compromise.</span></h2>
+        <p>Traditional dating platforms treat disclosure like a hurdle. We built a space where shared understanding is already the baseline.</p>
+      </div>
+
+      <div class="pillars-grid">
+        <article class="pillar-card reveal">
+          <div class="pillar-num">01</div>
+          <h3>Intentional Dating</h3>
+          <p>Meaningful matching engineered around compatibility, shared values, and genuine chemistry—without the anxiety of "when do I bring it up?"</p>
+        </article>
+
+        <article class="pillar-card reveal">
+          <div class="pillar-num">02</div>
+          <h3>Trusted Safe Space</h3>
+          <p>A supportive, moderated community hub where members share experiences, ask questions, and build lasting friendships in a judgment-free environment.</p>
+        </article>
+
+        <article class="pillar-card reveal">
+          <div class="pillar-num">03</div>
+          <h3>Uncompromising Privacy</h3>
+          <p>Granular visibility controls, encrypted messaging, and strict member verification ensure you stay in total control of your story.</p>
+        </article>
+      </div>
+    </div>
+
+    <!-- Teaser Banner -->
+    <div class="container reveal">
+      <div class="cta-banner">
+        <div class="cta-banner-text">
+          <h2>Something special is coming together.</h2>
+          <p>We’re keeping a few surprises under wraps until launch. Reserve your spot in our private beta or reach out directly.</p>
+        </div>
+        <div class="cta-banner-actions">
+          <button class="btn btn-primary btn-lg" data-open-beta>Join Beta Waitlist</button>
+          <a href="qa.html" class="btn btn-outline btn-lg">Explore Q&amp;A</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="index.html" class="brand">
+          <svg class="brand-icon small" viewBox="0 0 110 105" fill="none">
+            <defs>
+              <linearGradient id="footerPuzzleGrad" x1="15" y1="8" x2="92" y2="96" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#FFA577" />
+                <stop offset="35%" stop-color="#D8388A" />
+                <stop offset="72%" stop-color="#B824C9" />
+                <stop offset="100%" stop-color="#6D38E0" />
+              </linearGradient>
+            </defs>
+            <path d="M46 14C46 8.5 50.5 4 56 4C61.5 4 66 8.5 66 14C66 17.5 64.1 20.6 61.3 22.3L84 25C88.4 25.5 91.5 29.5 91 33.9L88.5 56C86.2 53.5 82.9 52 79.2 52C72.2 52 66.5 57.7 66.5 64.7C66.5 71.7 72.2 77.4 79.2 77.4C82.4 77.4 85.3 76.2 87.5 74.2L85.4 91.5C84.9 95.9 80.9 99 76.5 98.5L57.8 96.3C59.7 94 60.8 91.1 60.8 87.9C60.8 80.9 55.1 75.2 48.1 75.2C41.1 75.2 35.4 80.9 35.4 87.9C35.4 90.6 36.3 93.1 37.7 95.2L22.5 93.4C18.1 92.9 15 88.9 15.5 84.5L18.1 63.2C16.1 64.6 13.7 65.4 11 65.4C4.9 65.4 0 60.5 0 54.4C0 48.3 4.9 43.4 11 43.4C14.2 43.4 17.1 44.8 19.1 47L21.9 24.5C22.4 20.1 26.4 17 30.8 17.5L49.5 19.7C47.3 18.1 46 16.2 46 14Z" fill="url(#footerPuzzleGrad)"/>
+          </svg>
+          <div class="brand-wordmark">
+            <span class="brand-poz">POZzle</span><span class="brand-piece">Piece</span>
+          </div>
+        </a>
+        <p>Find the missing piece. Your perfect fit!</p>
+        <p>A modern dating platform and safe community built for people who are HIV+.</p>
+      </div>
+
+      <div class="footer-links">
+        <a href="index.html">About</a>
+        <a href="qa.html">Community Q&amp;A</a>
+        <a href="careers.html">Careers</a>
+        <a href="contact.html">Contact</a>
+        <a href="https://www.linkedin.com/company/pozzlepiece-inc/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <span>&copy; 2026 POZzlePiece Inc. All rights reserved.</span>
+      <span class="footer-tagline">Every piece belongs.</span>
+    </div>
+  </footer>
+
+  <!-- Beta Signup Modal -->
+  <div class="modal-backdrop" id="betaModal" aria-hidden="true">
+    <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="betaModalTitle">
+      <button class="modal-close" id="closeBetaModal" aria-label="Close modal">&times;</button>
+      <div class="modal-header">
+        <span class="section-tag">Early Access</span>
+        <h2 id="betaModalTitle">Join the <span class="gradient-text">POZzlePiece</span> Beta</h2>
+        <p>Be among the first to experience a safe, stigma-free space built for real connection.</p>
+      </div>
+      <form id="betaForm">
+        <div class="form-group">
+          <label for="betaName">First Name or Alias *</label>
+          <input type="text" id="betaName" required placeholder="How should we greet you?" />
+        </div>
+        <div class="form-group">
+          <label for="betaEmail">Email Address *</label>
+          <input type="email" id="betaEmail" required placeholder="you@example.com" />
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="betaPlatform">Preferred Device</label>
+            <select id="betaPlatform">
+              <option value="iOS">iOS (iPhone)</option>
+              <option value="Android">Android</option>
+              <option value="Web">Web App</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="betaCity">City / Region</label>
+            <input type="text" id="betaCity" placeholder="e.g., New York, LA, Remote" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="betaInterest">What excites you most?</label>
+          <select id="betaInterest">
+            <option value="Dating & Relationships">Dating &amp; Relationships</option>
+            <option value="Community & Friendships">Community &amp; Friendships</option>
+            <option value="Both">Both Dating &amp; Community</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-primary btn-full btn-lg">Reserve My Spot</button>
+        <p class="privacy-note">100% confidential. We never share or sell your information.</p>
+      </form>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="script.js"></script>
+</body>
+</html>

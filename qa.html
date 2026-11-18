@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>POZzlePiece — Community Q&A</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header class="site-header" id="siteHeader">
+    <div class="nav-inner">
+      <a href="index.html" class="brand" aria-label="POZzlePiece Home">
+        <svg class="brand-icon" viewBox="0 0 110 105" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="puzzleGrad" x1="15" y1="8" x2="92" y2="96" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#FFA577" />
+              <stop offset="35%" stop-color="#D8388A" />
+              <stop offset="72%" stop-color="#B824C9" />
+              <stop offset="100%" stop-color="#6D38E0" />
+            </linearGradient>
+          </defs>
+          <path d="M46 14C46 8.5 50.5 4 56 4C61.5 4 66 8.5 66 14C66 17.5 64.1 20.6 61.3 22.3L84 25C88.4 25.5 91.5 29.5 91 33.9L88.5 56C86.2 53.5 82.9 52 79.2 52C72.2 52 66.5 57.7 66.5 64.7C66.5 71.7 72.2 77.4 79.2 77.4C82.4 77.4 85.3 76.2 87.5 74.2L85.4 91.5C84.9 95.9 80.9 99 76.5 98.5L57.8 96.3C59.7 94 60.8 91.1 60.8 87.9C60.8 80.9 55.1 75.2 48.1 75.2C41.1 75.2 35.4 80.9 35.4 87.9C35.4 90.6 36.3 93.1 37.7 95.2L22.5 93.4C18.1 92.9 15 88.9 15.5 84.5L18.1 63.2C16.1 64.6 13.7 65.4 11 65.4C4.9 65.4 0 60.5 0 54.4C0 48.3 4.9 43.4 11 43.4C14.2 43.4 17.1 44.8 19.1 47L21.9 24.5C22.4 20.1 26.4 17 30.8 17.5L49.5 19.7C47.3 18.1 46 16.2 46 14Z" fill="url(#puzzleGrad)"/>
+        </svg>
+        <div class="brand-wordmark">
+          <span class="brand-poz">POZzle</span><span class="brand-piece">Piece</span>
+        </div>
+      </a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html" class="nav-link">About</a>
+        <a href="qa.html" class="nav-link active">Community Q&amp;A</a>
+        <a href="careers.html" class="nav-link">Careers</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="btn btn-primary" data-open-beta>Join Beta</button>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="page-hero container">
+      <span class="section-tag">Community &amp; Transparency</span>
+      <h1>Ask us <span class="gradient-text">anything.</span></h1>
+      <p>Curious about how POZzlePiece works, how we protect member privacy, or when we launch in your city? Browse answers or post a question below.</p>
+    </div>
+
+    <div class="container qa-layout">
+      <!-- Ask a Question Form -->
+      <aside class="qa-form-card">
+        <h3>Post a Question</h3>
+        <p class="muted-sm">Submit a question for our founding team or community thread.</p>
+        <form id="qaForm">
+          <div class="form-group">
+            <label for="qaName">Display Name (or Anonymous)</label>
+            <input type="text" id="qaName" placeholder="e.g., Alex M. or Anonymous" />
+          </div>
+          <div class="form-group">
+            <label for="qaCategory">Topic</label>
+            <select id="qaCategory">
+              <option value="App & Features">App &amp; Features</option>
+              <option value="Privacy & Safety">Privacy &amp; Safety</option>
+              <option value="Beta & Launch">Beta &amp; Launch</option>
+              <option value="Community">Community</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="qaQuestion">Your Question *</label>
+            <textarea id="qaQuestion" rows="4" required placeholder="What would you like to know about POZzlePiece?"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full">Post Question</button>
+        </form>
+      </aside>
+
+      <!-- Q&A Feed -->
+      <div class="qa-feed-wrap">
+        <div class="qa-filters" id="qaFilters">
+          <button class="filter-chip active" data-filter="All">All Questions</button>
+          <button class="filter-chip" data-filter="App & Features">App &amp; Features</button>
+          <button class="filter-chip" data-filter="Privacy & Safety">Privacy &amp; Safety</button>
+          <button class="filter-chip" data-filter="Beta & Launch">Beta &amp; Launch</button>
+          <button class="filter-chip" data-filter="Community">Community</button>
+        </div>
+
+        <div class="qa-list" id="qaList"></div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="index.html" class="brand">
+          <svg class="brand-icon small" viewBox="0 0 110 105" fill="none">
+            <defs>
+              <linearGradient id="footerPuzzleGrad" x1="15" y1="8" x2="92" y2="96" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#FFA577" />
+                <stop offset="35%" stop-color="#D8388A" />
+                <stop offset="72%" stop-color="#B824C9" />
+                <stop offset="100%" stop-color="#6D38E0" />
+              </linearGradient>
+            </defs>
+            <path d="M46 14C46 8.5 50.5 4 56 4C61.5 4 66 8.5 66 14C66 17.5 64.1 20.6 61.3 22.3L84 25C88.4 25.5 91.5 29.5 91 33.9L88.5 56C86.2 53.5 82.9 52 79.2 52C72.2 52 66.5 57.7 66.5 64.7C66.5 71.7 72.2 77.4 79.2 77.4C82.4 77.4 85.3 76.2 87.5 74.2L85.4 91.5C84.9 95.9 80.9 99 76.5 98.5L57.8 96.3C59.7 94 60.8 91.1 60.8 87.9C60.8 80.9 55.1 75.2 48.1 75.2C41.1 75.2 35.4 80.9 35.4 87.9C35.4 90.6 36.3 93.1 37.7 95.2L22.5 93.4C18.1 92.9 15 88.9 15.5 84.5L18.1 63.2C16.1 64.6 13.7 65.4 11 65.4C4.9 65.4 0 60.5 0 54.4C0 48.3 4.9 43.4 11 43.4C14.2 43.4 17.1 44.8 19.1 47L21.9 24.5C22.4 20.1 26.4 17 30.8 17.5L49.5 19.7C47.3 18.1 46 16.2 46 14Z" fill="url(#footerPuzzleGrad)"/>
+          </svg>
+          <div class="brand-wordmark">
+            <span class="brand-poz">POZzle</span><span class="brand-piece">Piece</span>
+          </div>
+        </a>
+        <p>A modern dating platform and safe community built for people who are HIV+.</p>
+      </div>
+
+      <div class="footer-links">
+        <a href="index.html">About</a>
+        <a href="qa.html">Community Q&amp;A</a>
+        <a href="careers.html">Careers</a>
+        <a href="contact.html">Contact</a>
+        <a href="https://www.linkedin.com/company/pozzlepiece-inc/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <span>&copy; 2026 POZzlePiece Inc. All rights reserved.</span>
+      <span class="footer-tagline">Every piece belongs.</span>
+    </div>
+  </footer>
+
+  <!-- Beta Signup Modal -->
+  <div class="modal-backdrop" id="betaModal" aria-hidden="true">
+    <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="betaModalTitle">
+      <button class="modal-close" id="closeBetaModal" aria-label="Close modal">&times;</button>
+      <div class="modal-header">
+        <span class="section-tag">Early Access</span>
+        <h2 id="betaModalTitle">Join the <span class="gradient-text">POZzlePiece</span> Beta</h2>
+        <p>Be among the first to experience a safe, stigma-free space built for real connection.</p>
+      </div>
+      <form id="betaForm">
+        <div class="form-group">
+          <label for="betaName">First Name or Alias *</label>
+          <input type="text" id="betaName" required placeholder="How should we greet you?" />
+        </div>
+        <div class="form-group">
+          <label for="betaEmail">Email Address *</label>
+          <input type="email" id="betaEmail" required placeholder="you@example.com" />
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="betaPlatform">Preferred Device</label>
+            <select id="betaPlatform">
+              <option value="iOS">iOS (iPhone)</option>
+              <option value="Android">Android</option>
+              <option value="Web">Web App</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="betaCity">City / Region</label>
+            <input type="text" id="betaCity" placeholder="e.g., New York, LA, Remote" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="betaInterest">What excites you most?</label>
+          <select id="betaInterest">
+            <option value="Dating & Relationships">Dating &amp; Relationships</option>
+            <option value="Community & Friendships">Community &amp; Friendships</option>
+            <option value="Both">Both Dating &amp; Community</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-primary btn-full btn-lg">Reserve My Spot</button>
+        <p class="privacy-note">100% confidential. We never share or sell your information.</p>
+      </form>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="script.js"></script>
+</body>
+</html>
