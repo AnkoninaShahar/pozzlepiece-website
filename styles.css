@@ -224,6 +224,10 @@ h3 {
   gap: 12px;
 }
 
+#btn-mobile {
+  display: none;
+}
+
 /* Buttons */
 .btn {
   display: inline-flex;
@@ -1127,7 +1131,8 @@ textarea:focus {
   display: none;
   align-items: center;
   justify-content: center;
-  padding: 20px;
+  padding: 16px;
+  overflow-y: auto;
 }
 
 .modal-backdrop.open {
@@ -1138,10 +1143,12 @@ textarea:focus {
   position: relative;
   width: 100%;
   max-width: 490px;
+  max-height: 90dvh;
+  overflow-y: auto;
   background: var(--bg-surface);
   border: 1px solid rgba(216, 56, 138, 0.4);
   border-radius: var(--radius-lg);
-  padding: 34px;
+  padding: 24px 20px;
   box-shadow: 0 28px 70px rgba(0, 0, 0, 0.65);
 }
 
@@ -1331,7 +1338,11 @@ textarea:focus {
 }
 
 @media (max-width: 508px) {
-  .nav-links {
-    top: 80px;
+  #btn-desktop {
+    display: none;
+  }
+  #btn-mobile {
+    display: block;
+    text-align: center;
   }
 }
