@@ -1012,6 +1012,7 @@ h3 {
   justify-content: space-between;
   gap: 12px;
   flex-wrap: wrap;
+  word-break: break-all;
 }
 
 .email-link {
@@ -1321,5 +1322,11 @@ textarea:focus {
   }
   .form-row {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 413px) {
+  .nav-links {
+    top: 80px;
   }
 }
