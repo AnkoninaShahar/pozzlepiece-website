@@ -1299,9 +1299,14 @@ textarea:focus {
   .badge-bottom {
     right: 0;
   }
-}
+  .hero-copy h1,
+  .hero-subtitle,
+  .hero-cta-group {
+    max-width: none;
+    text-align: center;
+    justify-content: center;
+  }
 
-@media (max-width: 720px) {
   .nav-links {
     display: none;
     position: absolute;
@@ -1325,7 +1330,7 @@ textarea:focus {
   }
 }
 
-@media (max-width: 413px) {
+@media (max-width: 508px) {
   .nav-links {
     top: 80px;
   }
